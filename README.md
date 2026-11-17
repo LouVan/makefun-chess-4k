@@ -6,11 +6,19 @@
 
 A 4 KB Python chess engine for the make.fun tiny-chess-01 bounty: alpha-beta search with principal variation search, a transposition table, killer move ordering, quiescence search, castling, and a fixed search budget per move.
 
+## Search
+
+Alpha-beta with principal variation search, a transposition table keyed on the position and side to move, null-move pruning, late move reductions, and a quiescence search capped at four plies.
+
 ## Run it
 
 ```sh
 MAKEFUN_ENV_URL=http://127.0.0.1:8099 python3 -P -s main.py
 ```
+
+## Evaluation
+
+Material plus piece-square terms, a bishop-pair bonus, a rook-on-the-edge nudge, and an endgame mop-up that walks the winning king in and pushes the bare king to the rim.
 
 ---
 
